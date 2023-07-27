@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Appointments from './components/Appointments';
 
 function App() {
+
+  // create a state for contacts and updateing contact
+  // create a state for appointms and updateing appointment
+  // create a function to add a contact
+  //create a function to add an app
+  // create a func to delete an appointment 
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Appointments />
     </div>
   );
 }
