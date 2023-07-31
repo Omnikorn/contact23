@@ -1,8 +1,13 @@
 import React from 'react'
+import AppCard from './AppCard'
 
-const Appointments = () => {
+const Appointments = ({appointments}) => {
   return (
-    <div>Appointments</div>
+    <>
+    {appointments.map((appointment=>{
+      return (<AppCard appointmnet={appointment} key={appointment.id}/>)
+    }))}
+    </>
   )
 }
 

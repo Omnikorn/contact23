@@ -29,11 +29,13 @@ function App() {
   // create a state for appointms and updateing appointment
 
   const [appointments, setappo] = useState([{
+    text:"fix my teeth",
     id:1,
     with:"contact",
     date:"13/2/43",
     time:"10pm"
   },{
+    text:"feed the beast",
     id: 2,
     with: "kiki",
     date: "14/8/09",

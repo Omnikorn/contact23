@@ -1,8 +1,13 @@
 import React from 'react'
 
-const AppCard = () => {
+const AppCard = ({appointmnet}) => {
   return (
-    <div>AppCard</div>
+    <div>
+      <h2>{appointmnet.text}</h2>
+      <p>with {appointmnet.with} at {appointmnet.time}</p>
+
+
+    </div>
   )
 }
 
