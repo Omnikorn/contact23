@@ -44,12 +44,14 @@ function App() {
   // create a function to add a contact
   //create a function to add an app
   // create a func to delete an appointment 
+const [query, setQuery] = useState("")              
 
 
   return (
     <div className="App">
+      
       <Appointments appointments={appointments}/>
-      <Contacts contacts={contacts}/>
+      <Contacts contacts={contacts} />
     </div>
   );
 }
