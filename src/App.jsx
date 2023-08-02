@@ -3,6 +3,7 @@ import './App.css';
 import Appointments from './components/Appointments';
 import { useState } from "react"
 import Contacts from './components/Contacts';
+import AddContact from './components/AddContact';
 
 function App() {
 
@@ -42,6 +43,12 @@ function App() {
     time: "11am"
   }])
   // create a function to add a contact
+
+  const addContact = (contact) =>{
+    const id = Math.floor(Math.random()*10000)+1
+    const newContact = {id, ...contact}
+    setContacts([...contacts, newContact])
+  } 
   //create a function to add an app
   // create a func to delete an appointment 
 const [query, setQuery] = useState("")              
@@ -51,7 +58,9 @@ const [query, setQuery] = useState("")
     <div className="App">
       
       <Appointments appointments={appointments}/>
+      <AddContact onAdd={addContact}/>
       <Contacts contacts={contacts} />
+      
     </div>
   );
 }
