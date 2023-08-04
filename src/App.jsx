@@ -32,13 +32,13 @@ function App() {
   const [appointments, setappo] = useState([{
     text:"fix my teeth",
     id:1,
-    with:"contact",
+    who:"contact",
     date:"13/2/43",
     time:"10pm"
   },{
     text:"feed the beast",
     id: 2,
-    with: "kiki",
+    who: "kiki",
     date: "14/8/09",
     time: "11am"
   }])
@@ -50,14 +50,20 @@ function App() {
     setContacts([...contacts, newContact])
   } 
   //create a function to add an app
+
+  const addAppointment = (appointment) =>{
+    const id = Math.floor(Math.random()*10000)+1
+    const newApp ={id, ...appointment}
+    setappo([...appointments,newApp])
+  }
   // create a func to delete an appointment 
-const [query, setQuery] = useState("")              
+             
 
 
   return (
     <div className="App">
       
-      <Appointments appointments={appointments}/>
+      <Appointments appointments={appointments} onAdd={addAppointment}/>
       <AddContact onAdd={addContact}/>
       <Contacts contacts={contacts} />
       

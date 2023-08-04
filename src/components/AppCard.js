@@ -4,7 +4,7 @@ const AppCard = ({appointmnet}) => {
   return (
     <div>
       <h2>{appointmnet.text}</h2>
-      <p>with {appointmnet.with} at {appointmnet.time}</p>
+      <p>with {appointmnet.who} at {appointmnet.time}</p>
 
 
     </div>
