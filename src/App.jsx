@@ -4,6 +4,8 @@ import Appointments from './components/Appointments';
 import { useState } from "react"
 import Contacts from './components/Contacts';
 import AddContact from './components/AddContact';
+import {Routes,Route} from "react-router-dom"
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -61,13 +63,17 @@ function App() {
 
 
   return (
-    <div className="App">
-      
-      <Appointments appointments={appointments} onAdd={addAppointment}/>
-      <AddContact onAdd={addContact}/>
-      <Contacts contacts={contacts} />
-      
-    </div>
+    <Routes >
+    
+     <Route path='/' element={<NavBar />} >
+
+        <Route index path="contacts" element={<Contacts 
+        contacts={contacts} onAdd={addContact}/>} />
+        <Route path='appointments' element={<Appointments appointments={appointments} onAdd={addAppointment}/>} />
+
+
+      </Route> 
+    </Routes>
   );
 }
 
